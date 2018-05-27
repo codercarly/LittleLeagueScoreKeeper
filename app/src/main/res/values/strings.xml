@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Little League Score Keeper</string>
+
+    <string name="Visitor">Visitor</string>
+    <string name="Zero">0</string>
+    <string name="Run">Run</string>
+    <string name="Hit">Hit</string>
+    <string name="Pitch">Pitch</string>
+    <string name="Reset_SS">Reset Score/Stats</string>
+    <string name="Home">Home</string>
+    <string name="Ball">Ball</string>
+    <string name="Strike">Strike</string>
+    <string name="Out">Out</string>
+    <string name="One">1</string>
+    <string name="Inning">Inning</string>
+    <string name="Reset_Count">Reset Count</string>
+    <string name="Reset_Inning">Reset Inning</string>
+</resources>

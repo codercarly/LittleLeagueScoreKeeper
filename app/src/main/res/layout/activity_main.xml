@@ -1,0 +1,483 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="344dp"
+            android:background="@drawable/jhawkbaseballfield"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="370dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/Visitor"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/visitor_score"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:background="@color/colorSecondaryText"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorTextColor"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:onClick="addRunForVisitor"
+                    android:text="@string/Run"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <View style="@style/Bar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="sans-serif"
+                        android:onClick="addHitForVisitor"
+                        android:text="@string/Hit"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/visitor_hits"
+                        android:layout_width="40dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorSecondaryText"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@string/Zero"
+                        android:textColor="@color/colorTextColor"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="sans-serif"
+                        android:onClick="addPitchForVisitor"
+                        android:text="@string/Pitch"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/visitor_pitches"
+                        android:layout_width="40dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorSecondaryText"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@string/Zero"
+                        android:textColor="@color/colorTextColor"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:onClick="resetScoreVisitor"
+                    android:text="@string/Reset_SS"
+                    android:textSize="8sp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <View style="@style/Bar" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="370dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/Home"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/home_score"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:background="@color/colorSecondaryText"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorTextColor"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:onClick="addRunForHome"
+                    android:text="@string/Run"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <View style="@style/Bar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="sans-serif"
+                        android:onClick="addHitForHome"
+                        android:text="@string/Hit"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_hits"
+                        android:layout_width="40dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorSecondaryText"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@string/Zero"
+                        android:textColor="@color/colorTextColor"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="sans-serif"
+                        android:onClick="addPitchForHome"
+                        android:text="@string/Pitch"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_pitches"
+                        android:layout_width="40dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorSecondaryText"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@string/Zero"
+                        android:textColor="@color/colorTextColor"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:onClick="resetScoreHome"
+                    android:text="@string/Reset_SS"
+                    android:textSize="8sp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold" />
+
+                <View style="@style/Bar" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/ballCount"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondaryText"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/Zero"
+                android:textColor="@color/colorTextColor"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/strikeCount"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="75dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondaryText"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/Zero"
+                android:textColor="@color/colorTextColor"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/outCount"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="75dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondaryText"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/Zero"
+                android:textColor="@color/colorTextColor"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:background="@color/colorPrimary">
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:onClick="addBall"
+                android:text="@string/Ball"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:onClick="addStrike"
+                android:text="@string/Strike"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:onClick="addOut"
+                android:text="@string/Out"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/inningCount"
+                android:layout_width="25dp"
+                android:layout_height="50dp"
+                android:fontFamily="sans-serif"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/One"
+                android:textColor="@color/colorTextColor"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="50dp"
+                android:fontFamily="sans-serif"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/Inning"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="40dp"
+                android:fontFamily="sans-serif"
+                android:onClick="resetCount"
+                android:text="@string/Reset_Count"
+                android:textSize="8sp"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:onClick="resetInning"
+                android:text="@string/Reset_Inning"
+                android:textSize="8sp"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
