@@ -1,4 +1,4 @@
-# LittleLeagueScoreKeeper
+# Score Keeper
 
 # Project Overview:
 - Create an app which gives the user the ability to keep track of the score of two different teams playing a game. 
