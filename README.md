@@ -1,7 +1,7 @@
 # Little League Score Keeper App
 A score keeper app that allows the user to keep track of the score and stats of a little league baseball game!
 
-<img src="https://github.com/codercarly/LittleLeagueScoreKeeper/blob/master/littleleague_animatted_1.gif" width="200">
+<img src="https://github.com/codercarly/LittleLeagueScoreKeeper/blob/master/littleleague_animatted_2.gif" width="200">
 
 # Project Overview:
 - Create an app which gives the user the ability to keep track of the score of two different teams playing a game. 
